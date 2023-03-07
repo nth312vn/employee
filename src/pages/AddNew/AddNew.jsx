@@ -11,24 +11,16 @@ import {
   Label,
   Row,
 } from "reactstrap";
-import { loginField } from "../../constants/login";
+import { addNewForm } from "../../constants/addNew";
 import useForm from "../../hooks/useForm";
-import { validationLogin } from "./validationLogin";
 
-const Login = () => {
-  const { user, password } = loginField;
-  const form = useForm(
-    {
-      [user]: "",
-      [password]: "",
-    },
-    validationLogin()
-  );
-  const { value, error, handleChange, clearFrom, setField, handleSubmit } =
-    form;
-  const onSubmit = (formValues) => {
-    console.log(formValues);
-  };
+const AddNew = () => {
+  const { optionOne, optionTwo } = addNewForm;
+  const form = useForm({
+    [optionOne]: "",
+    [optionTwo]: "",
+  });
+  const { value, handleChange, clearFrom, setField, handleSubmit } = form;
   return (
     <Container style={{ marginTop: "50px" }}>
       <Row>
@@ -36,45 +28,44 @@ const Login = () => {
           style={{ textAlign: "center", fontSize: "30px" }}
           className="pb-2 mr-sm-2 mb-sm-0"
         >
-          Employee Polls Web App
+          Would You Rather
         </Label>
-      </Row>
-      <Row>
-        <Label
-          style={{ textAlign: "center", fontSize: "30px", marginTop: "50px" }}
+        <span
+          style={{ textAlign: "center", fontSize: "20px" }}
           className="pb-2 mr-sm-2 mb-sm-0"
         >
-          Login
-        </Label>
+          Create Your Own Poll
+        </span>
       </Row>
+
       <Row>
         <Col>
           <Card>
             <CardBody>
-              <Form onSubmit={(e) => handleSubmit(e, onSubmit)}>
+              <Form onSubmit={(e) => {}}>
                 <FormGroup className="pb-2 mr-sm-2 mb-sm-0">
-                  <Label for="exampleEmail" className="mr-sm-2">
-                    User
+                  <Label for="firstOption" className="mr-sm-2">
+                    First Option
                   </Label>
                   <Input
                     type="text"
-                    value={value[user]}
-                    name={user}
-                    id="exampleEmail"
-                    placeholder="User"
+                    value={value[optionOne]}
+                    name={optionOne}
+                    id="firstOption"
+                    placeholder="Option one"
                     onChange={handleChange}
                   />
                 </FormGroup>
                 <FormGroup className="pb-2 mr-sm-2 mb-sm-0">
-                  <Label for="examplePassword" className="mr-sm-2">
-                    Password
+                  <Label for="secondOption" className="mr-sm-2">
+                    Second Option
                   </Label>
                   <Input
-                    type="password"
-                    value={value[password]}
-                    name={password}
-                    id="examplePassword"
-                    placeholder="Password"
+                    type="text"
+                    value={value[optionTwo]}
+                    name={optionTwo}
+                    id="secondOption"
+                    placeholder="Option two"
                     onChange={handleChange}
                   />
                 </FormGroup>
@@ -85,7 +76,7 @@ const Login = () => {
                   type="submit"
                   color="primary"
                 >
-                  Login
+                  Submit
                 </Button>
               </Form>
             </CardBody>
@@ -96,4 +87,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default AddNew;

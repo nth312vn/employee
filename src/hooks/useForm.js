@@ -22,24 +22,20 @@ const useForm = (initialValue, validations) => {
   };
   const handleValidate = () => {
     if (validations) {
-      const resultValidate = Object.entries(validations).map(
-        ([key, validation]) => {
-          return {
-            key: validation(value[key], value),
-          };
-        }
-      );
-      setError(resultValidate);
-      return resultValidate;
+      Object.entries(validations).forEach(([key, validation]) => {
+        validation(value[key], value);
+      });
     }
   };
   const handleSubmit = (event, onSubmit) => {
-    event.preventDefault();
-    const result = handleValidate();
-    console.log(result);
-    if (result && result.some((item) => item.key)) return;
-
-    onSubmit(value);
+    try {
+      event.preventDefault();
+      handleValidate();
+      setError(null);
+      onSubmit(value);
+    } catch (e) {
+      setError(e);
+    }
   };
   const getValue = (name) => {
     return value[name];

@@ -5,12 +5,12 @@ export const validationLogin = () => {
   return {
     [user]: (newValue) => {
       if (!newValue) {
-        return "This field is required";
+        throw new Error("Missing user field is required");
       }
     },
     [password]: (newValue) => {
       if (!newValue) {
-        return "This field is required";
+        throw new Error("Missing password field is required");
       }
     },
   };
