@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {
   Button,
   Card,
@@ -24,12 +26,19 @@ const Login = () => {
     },
     validationLogin()
   );
-  const { value, error, handleChange, clearFrom, setField, handleSubmit } =
+  const users = useSelector((state) => state.users);
+  const navigate = useNavigate();
+  const { value, error, handleChange, clearFrom, setError, handleSubmit } =
     form;
   const onSubmit = (formValues) => {
     clearFrom();
-    console.log(formValues);
+    if (users.listUser[formValues[user]]?.password === formValues[password]) {
+      navigate("/");
+      localStorage.setItem("user", users.listUser[formValues[user]]);
+    }
+    setError("user name or password is invalid");
   };
+  console.log(error);
   return (
     <Container style={{ marginTop: "50px" }}>
       <Row>
@@ -79,6 +88,7 @@ const Login = () => {
                     onChange={handleChange}
                   />
                 </FormGroup>
+                {error && <div style={{ color: "red" }}>{error}</div>}
                 <Button
                   style={{
                     marginTop: "30px",

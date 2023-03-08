@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Collapse,
   Nav,
@@ -12,8 +12,12 @@ import {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate();
   const toggle = () => setIsOpen(!isOpen);
+  const handleLogOut = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
   return (
     <div>
       <Navbar
@@ -53,7 +57,7 @@ const Header = () => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/login" tag={Link}>
+              <NavLink onClick={handleLogOut} to="/login" tag={Link}>
                 Logout
               </NavLink>
             </NavItem>

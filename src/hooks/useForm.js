@@ -21,11 +21,10 @@ const useForm = (initialValue, validations) => {
     });
   };
   const handleValidate = () => {
-    if (validations) {
-      Object.entries(validations).forEach(([key, validation]) => {
-        validation(value[key], value);
-      });
-    }
+    if (!validations) return;
+    Object.entries(validations).forEach(([key, validation]) => {
+      validation(value[key], value);
+    });
   };
   const handleSubmit = (event, onSubmit) => {
     try {
@@ -48,6 +47,7 @@ const useForm = (initialValue, validations) => {
     setField,
     handleSubmit,
     getValue,
+    setError,
   };
 };
 export default useForm;
