@@ -16,6 +16,22 @@ export const questionsReducer = (state = initialState, action) => {
       };
       return newSate;
     }
+    case questionActionsType.EDIT_QUESTION: {
+      const { qid, authedUser, answer } = action.payload;
+      const newSate = { ...state };
+      newSate.questions = {
+        ...newSate.questions,
+        [qid]: {
+          ...newSate.questions[qid],
+          [answer]: {
+            ...newSate.questions[qid][answer],
+            votes: newSate.questions[qid][answer].votes.concat([authedUser]),
+          },
+        },
+      };
+      return newSate;
+    }
+
     default:
       return state;
   }

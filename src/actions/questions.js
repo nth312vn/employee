@@ -8,3 +8,7 @@ export const addNewQuestions = (questions) => ({
   type: questionActionsType.ADD_NEW_QUESTIONS,
   payload: questions,
 });
+export const editQuestions = (question) => ({
+  type: questionActionsType.EDIT_QUESTION,
+  payload: question,
+});
