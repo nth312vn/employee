@@ -34,11 +34,13 @@ const Login = () => {
     clearFrom();
     if (users.listUser[formValues[user]]?.password === formValues[password]) {
       navigate("/");
-      localStorage.setItem("user", users.listUser[formValues[user]]);
+      localStorage.setItem(
+        "user",
+        JSON.stringify(users.listUser[formValues[user]])
+      );
     }
     setError("user name or password is invalid");
   };
-  console.log(error);
   return (
     <Container style={{ marginTop: "50px" }}>
       <Row>

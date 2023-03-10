@@ -18,6 +18,7 @@ const Header = () => {
     localStorage.removeItem("user");
     navigate("/login");
   };
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <div>
       <Navbar
@@ -53,7 +54,7 @@ const Header = () => {
                   style={{ borderRadius: "50%", width: "30px", height: "30px" }}
                   alt="avatar"
                 />
-                <span>hihi</span>
+                <span>{user.name}</span>
               </NavLink>
             </NavItem>
             <NavItem>

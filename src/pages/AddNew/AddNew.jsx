@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {
   Button,
   Card,
@@ -11,16 +13,34 @@ import {
   Label,
   Row,
 } from "reactstrap";
+import { handleInit } from "../../actions/handleInitAction";
+import { addNewQuestions } from "../../actions/questions";
 import { addNewForm } from "../../constants/addNew";
+import { _saveQuestion } from "../../data/_DATA";
 import useForm from "../../hooks/useForm";
 
 const AddNew = () => {
   const { optionOne, optionTwo } = addNewForm;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const form = useForm({
     [optionOne]: "",
     [optionTwo]: "",
   });
-  const { value, handleChange, clearFrom, setField, handleSubmit } = form;
+  const { value, handleChange, handleSubmit } = form;
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  const onSubmit = async (formValue) => {
+    const params = {
+      optionOneText: formValue[optionOne],
+      optionTwoText: formValue[optionTwo],
+      author: user.id,
+    };
+    const res = await _saveQuestion(params);
+    console.log(res);
+    dispatch(addNewQuestions(res));
+    navigate("/");
+  };
   return (
     <Container style={{ marginTop: "50px" }}>
       <Row>
@@ -42,7 +62,11 @@ const AddNew = () => {
         <Col>
           <Card>
             <CardBody>
-              <Form onSubmit={(e) => {}}>
+              <Form
+                onSubmit={(e) => {
+                  handleSubmit(e, onSubmit);
+                }}
+              >
                 <FormGroup className="pb-2 mr-sm-2 mb-sm-0">
                   <Label for="firstOption" className="mr-sm-2">
                     First Option
