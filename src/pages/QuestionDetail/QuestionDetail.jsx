@@ -45,7 +45,7 @@ const QuestionDetail = () => {
       </Row>
       <Row style={{ margin: "50px 0px" }}>
         <Col style={{ textAlign: "center" }}>
-          <img
+          {/* <img
             src="https://www.w3schools.com/howto/img_avatar2.png"
             alt="avatar"
             style={{
@@ -53,7 +53,7 @@ const QuestionDetail = () => {
               width: "50px",
               height: "50px",
             }}
-          />
+          /> */}
         </Col>
       </Row>
       <Row>

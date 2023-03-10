@@ -23,12 +23,13 @@ const Home = () => {
         !questions.questions[question].optionOne.votes.includes(user.id) &&
         !questions.questions[question].optionTwo.votes.includes(user.id)
     );
-  console.log(unAnswer);
   return (
     <div>
       <Header />
       <div style={{ marginTop: "100px" }}>
-        <h3 style={{ textAlign: "center" }}>New Question</h3>
+        <h3 data-testid="home" style={{ textAlign: "center" }}>
+          New Question
+        </h3>
         <CardGroup>
           {unAnswer.map((question, index) => (
             <Question key={index} question={questions.questions[question]} />

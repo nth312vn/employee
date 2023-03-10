@@ -56,7 +56,7 @@ const Login = () => {
           style={{ textAlign: "center", fontSize: "30px", marginTop: "50px" }}
           className="pb-2 mr-sm-2 mb-sm-0"
         >
-          Login
+          <div data-testid="login-heading"> Login</div>
         </Label>
       </Row>
       <Row>

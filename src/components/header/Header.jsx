@@ -48,13 +48,13 @@ const Header = () => {
           </Nav>
           <Nav>
             <NavItem>
-              <NavLink to="/user" tag={Link}>
-                <img
+              <NavLink>
+                {/* <img
                   src="https://www.w3schools.com/howto/img_avatar2.png"
                   style={{ borderRadius: "50%", width: "30px", height: "30px" }}
                   alt="avatar"
-                />
-                <span>{user.name}</span>
+                /> */}
+                <span>{user?.name}</span>
               </NavLink>
             </NavItem>
             <NavItem>
