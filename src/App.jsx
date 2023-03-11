@@ -4,7 +4,6 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { handleInit } from "./actions/handleInitAction";
 import "./App.css";
 import MainLayout from "./components/mainLayout/MainLayout";
-
 import Login from "./pages/Login/Login";
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
     dispatch(handleInit());
   }, []);
   useEffect(() => {
-    const user = localStorage.getItem("user");
+    const user = store.users.authUser;
     if (!user) {
       navigate("/login");
     }

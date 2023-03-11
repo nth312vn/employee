@@ -1,0 +1,594 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container"
+        style="margin-top: 50px;"
+      >
+        <div
+          class="row"
+        >
+          <label
+            class="pb-2 mr-sm-2 mb-sm-0 form-label"
+            style="text-align: center; font-size: 30px;"
+          >
+            Employee Polls Web App
+          </label>
+        </div>
+        <div
+          class="row"
+        >
+          <label
+            class="pb-2 mr-sm-2 mb-sm-0 form-label"
+            style="text-align: center; font-size: 30px; margin-top: 50px;"
+          >
+            <div
+              data-testid="login-heading"
+            >
+               Login
+            </div>
+          </label>
+        </div>
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <div
+              class="card"
+            >
+              <div
+                class="card-body"
+              >
+                <form
+                  class=""
+                >
+                  <div
+                    class="pb-2 mr-sm-2 mb-sm-0 mb-3"
+                  >
+                    <label
+                      class="mr-sm-2 form-label"
+                      for="user"
+                    >
+                      User
+                    </label>
+                    <input
+                      class="form-control"
+                      data-testid="username"
+                      id="user"
+                      name="user"
+                      placeholder="User"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class="pb-2 mr-sm-2 mb-sm-0 mb-3"
+                  >
+                    <label
+                      class="mr-sm-2 form-label"
+                      for="password"
+                    >
+                      Password
+                    </label>
+                    <input
+                      class="form-control"
+                      data-testid="password"
+                      id="password"
+                      name="password"
+                      placeholder="Password"
+                      type="password"
+                      value=""
+                    />
+                  </div>
+                  <button
+                    class="btn btn-primary"
+                    style="margin-top: 30px;"
+                    type="submit"
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container"
+      style="margin-top: 50px;"
+    >
+      <div
+        class="row"
+      >
+        <label
+          class="pb-2 mr-sm-2 mb-sm-0 form-label"
+          style="text-align: center; font-size: 30px;"
+        >
+          Employee Polls Web App
+        </label>
+      </div>
+      <div
+        class="row"
+      >
+        <label
+          class="pb-2 mr-sm-2 mb-sm-0 form-label"
+          style="text-align: center; font-size: 30px; margin-top: 50px;"
+        >
+          <div
+            data-testid="login-heading"
+          >
+             Login
+          </div>
+        </label>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="card-body"
+            >
+              <form
+                class=""
+              >
+                <div
+                  class="pb-2 mr-sm-2 mb-sm-0 mb-3"
+                >
+                  <label
+                    class="mr-sm-2 form-label"
+                    for="user"
+                  >
+                    User
+                  </label>
+                  <input
+                    class="form-control"
+                    data-testid="username"
+                    id="user"
+                    name="user"
+                    placeholder="User"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="pb-2 mr-sm-2 mb-sm-0 mb-3"
+                >
+                  <label
+                    class="mr-sm-2 form-label"
+                    for="password"
+                  >
+                    Password
+                  </label>
+                  <input
+                    class="form-control"
+                    data-testid="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    type="password"
+                    value=""
+                  />
+                </div>
+                <button
+                  class="btn btn-primary"
+                  style="margin-top: 30px;"
+                  type="submit"
+                >
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`should render the component login 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container"
+        style="margin-top: 50px;"
+      >
+        <div
+          class="row"
+        >
+          <label
+            class="pb-2 mr-sm-2 mb-sm-0 form-label"
+            style="text-align: center; font-size: 30px;"
+          >
+            Employee Polls Web App
+          </label>
+        </div>
+        <div
+          class="row"
+        >
+          <label
+            class="pb-2 mr-sm-2 mb-sm-0 form-label"
+            style="text-align: center; font-size: 30px; margin-top: 50px;"
+          >
+            <div
+              data-testid="login-heading"
+            >
+               Login
+            </div>
+          </label>
+        </div>
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <div
+              class="card"
+            >
+              <div
+                class="card-body"
+              >
+                <form
+                  class=""
+                >
+                  <div
+                    class="pb-2 mr-sm-2 mb-sm-0 mb-3"
+                  >
+                    <label
+                      class="mr-sm-2 form-label"
+                      for="user"
+                    >
+                      User
+                    </label>
+                    <input
+                      class="form-control"
+                      data-testid="username"
+                      id="user"
+                      name="user"
+                      placeholder="User"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class="pb-2 mr-sm-2 mb-sm-0 mb-3"
+                  >
+                    <label
+                      class="mr-sm-2 form-label"
+                      for="password"
+                    >
+                      Password
+                    </label>
+                    <input
+                      class="form-control"
+                      data-testid="password"
+                      id="password"
+                      name="password"
+                      placeholder="Password"
+                      type="password"
+                      value=""
+                    />
+                  </div>
+                  <button
+                    class="btn btn-primary"
+                    style="margin-top: 30px;"
+                    type="submit"
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container"
+      style="margin-top: 50px;"
+    >
+      <div
+        class="row"
+      >
+        <label
+          class="pb-2 mr-sm-2 mb-sm-0 form-label"
+          style="text-align: center; font-size: 30px;"
+        >
+          Employee Polls Web App
+        </label>
+      </div>
+      <div
+        class="row"
+      >
+        <label
+          class="pb-2 mr-sm-2 mb-sm-0 form-label"
+          style="text-align: center; font-size: 30px; margin-top: 50px;"
+        >
+          <div
+            data-testid="login-heading"
+          >
+             Login
+          </div>
+        </label>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="card-body"
+            >
+              <form
+                class=""
+              >
+                <div
+                  class="pb-2 mr-sm-2 mb-sm-0 mb-3"
+                >
+                  <label
+                    class="mr-sm-2 form-label"
+                    for="user"
+                  >
+                    User
+                  </label>
+                  <input
+                    class="form-control"
+                    data-testid="username"
+                    id="user"
+                    name="user"
+                    placeholder="User"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="pb-2 mr-sm-2 mb-sm-0 mb-3"
+                >
+                  <label
+                    class="mr-sm-2 form-label"
+                    for="password"
+                  >
+                    Password
+                  </label>
+                  <input
+                    class="form-control"
+                    data-testid="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    type="password"
+                    value=""
+                  />
+                </div>
+                <button
+                  class="btn btn-primary"
+                  style="margin-top: 30px;"
+                  type="submit"
+                >
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`should render the component notfound 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="not-found"
+      >
+        <img
+          alt="not-found"
+          src="https://www.pngitem.com/pimgs/m/561-5616833_image-not-found-png-not-found-404-png.png"
+        />
+        <a
+          class="link-home"
+          href="/"
+        >
+          Go Home
+        </a>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="not-found"
+    >
+      <img
+        alt="not-found"
+        src="https://www.pngitem.com/pimgs/m/561-5616833_image-not-found-png-not-found-404-png.png"
+      />
+      <a
+        class="link-home"
+        href="/"
+      >
+        Go Home
+      </a>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

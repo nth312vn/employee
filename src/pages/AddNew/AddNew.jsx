@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
   Button,
@@ -13,8 +13,8 @@ import {
   Label,
   Row,
 } from "reactstrap";
-import { handleInit } from "../../actions/handleInitAction";
 import { addNewQuestions } from "../../actions/questions";
+import { updateUser } from "../../actions/usersAction";
 import { addNewForm } from "../../constants/addNew";
 import { _saveQuestion } from "../../data/_DATA";
 import useForm from "../../hooks/useForm";
@@ -28,7 +28,7 @@ const AddNew = () => {
     [optionTwo]: "",
   });
   const { value, handleChange, handleSubmit } = form;
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = useSelector((state) => state.users.authUser);
 
   const onSubmit = async (formValue) => {
     const params = {
@@ -37,8 +37,9 @@ const AddNew = () => {
       author: user.id,
     };
     const res = await _saveQuestion(params);
-    console.log(res);
+    const userUpdate = { ...user, questions: [...user.questions, res.id] };
     dispatch(addNewQuestions(res));
+    dispatch(updateUser(userUpdate));
     navigate("/");
   };
   return (

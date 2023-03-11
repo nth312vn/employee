@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
   Button,
@@ -13,6 +13,7 @@ import {
   Label,
   Row,
 } from "reactstrap";
+import { saveUser } from "../../actions/usersAction";
 import { loginField } from "../../constants/login";
 import useForm from "../../hooks/useForm";
 import { validationLogin } from "./validationLogin";
@@ -28,16 +29,14 @@ const Login = () => {
   );
   const users = useSelector((state) => state.users);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { value, error, handleChange, clearFrom, setError, handleSubmit } =
     form;
   const onSubmit = (formValues) => {
     clearFrom();
     if (users.listUser[formValues[user]]?.password === formValues[password]) {
       navigate("/");
-      localStorage.setItem(
-        "user",
-        JSON.stringify(users.listUser[formValues[user]])
-      );
+      dispatch(saveUser(users.listUser[formValues[user]]));
     }
     setError("user name or password is invalid");
   };
@@ -69,6 +68,7 @@ const Login = () => {
                     User
                   </Label>
                   <Input
+                    data-testid="username"
                     type="text"
                     value={value[user]}
                     name={user}
@@ -82,6 +82,7 @@ const Login = () => {
                     Password
                   </Label>
                   <Input
+                    data-testid="password"
                     type="password"
                     value={value[password]}
                     name={password}

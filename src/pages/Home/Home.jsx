@@ -7,7 +7,7 @@ import Question from "../../components/question/Question";
 const Home = () => {
   const store = useSelector((state) => state);
   const { questions } = store;
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = store.users.authUser;
 
   const answer =
     questions &&
@@ -23,6 +23,7 @@ const Home = () => {
         !questions.questions[question].optionOne.votes.includes(user.id) &&
         !questions.questions[question].optionTwo.votes.includes(user.id)
     );
+  console.log(unAnswer);
   return (
     <div>
       <Header />
@@ -31,18 +32,30 @@ const Home = () => {
           New Question
         </h3>
         <CardGroup>
-          {unAnswer.map((question, index) => (
-            <Question key={index} question={questions.questions[question]} />
-          ))}
+          {unAnswer
+            .sort(
+              (a, b) =>
+                questions.questions[b].timestamp -
+                questions.questions[a].timestamp
+            )
+            .map((question, index) => (
+              <Question key={index} question={questions.questions[question]} />
+            ))}
         </CardGroup>
       </div>
       <div style={{ marginTop: "100px" }}>
         <h3 style={{ textAlign: "center" }}>Done</h3>
 
         <CardGroup>
-          {answer.map((question, index) => (
-            <Question key={index} question={questions.questions[question]} />
-          ))}
+          {answer
+            .sort(
+              (a, b) =>
+                questions.questions[b].timestamp -
+                questions.questions[a].timestamp
+            )
+            .map((question, index) => (
+              <Question key={index} question={questions.questions[question]} />
+            ))}
         </CardGroup>
       </div>
     </div>

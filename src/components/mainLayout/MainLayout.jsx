@@ -6,6 +6,7 @@ import LeaderBoard from "../../pages/LeaderBoard/LeaderBoard";
 import AddNew from "../../pages/AddNew/AddNew";
 import Header from "../header/Header";
 import QuestionDetail from "../../pages/QuestionDetail/QuestionDetail";
+import NotFound from "../../pages/NotFound/NotFound";
 
 const MainLayout = () => {
   return (
@@ -19,8 +20,9 @@ const MainLayout = () => {
         <Routes>
           <Route path="/leaderboard" element={<LeaderBoard />} />
           <Route path="/" element={<Home />} />
-          <Route path="/new" element={<AddNew />} />
+          <Route path="/add" element={<AddNew />} />
           <Route path="question/:id" element={<QuestionDetail />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
     </>

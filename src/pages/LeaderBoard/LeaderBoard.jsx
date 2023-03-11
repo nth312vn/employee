@@ -8,7 +8,6 @@ const LeaderBoard = () => {
   const tableDislay =
     listUser &&
     Object.keys(listUser).map((user) => {
-      console.log(listUser[user]?.answers);
       return {
         name: user,
         answers:
@@ -19,6 +18,7 @@ const LeaderBoard = () => {
           Object.keys(listUser[user].questions).length,
       };
     });
+  console.log(tableDislay);
   return (
     <Table>
       <thead>
