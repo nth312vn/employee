@@ -16,6 +16,7 @@ const LeaderBoard = () => {
         created:
           listUser[user]?.questions &&
           Object.keys(listUser[user].questions).length,
+        avatarURL: listUser[user].avatarURL,
       };
     });
   console.log(tableDislay);
@@ -38,7 +39,18 @@ const LeaderBoard = () => {
             .map((item, index) => (
               <tr key={index}>
                 <th scope="row">{index}</th>
-                <td>{item.name}</td>
+                <td>
+                  <img
+                    src={item?.avatarURL}
+                    style={{
+                      borderRadius: "50%",
+                      width: "30px",
+                      height: "30px",
+                    }}
+                    alt="avatar"
+                  />
+                  {item.name}
+                </td>
                 <td>{item.answers}</td>
                 <td>{item.created}</td>
               </tr>

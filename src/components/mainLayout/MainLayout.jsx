@@ -22,7 +22,7 @@ const MainLayout = () => {
           <Route path="/" element={<Home />} />
           <Route path="/add" element={<AddNew />} />
           <Route path="question/:id" element={<QuestionDetail />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/404" element={<NotFound />} />
         </Routes>
       </Container>
     </>
