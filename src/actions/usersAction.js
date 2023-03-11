@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import { userAcionsType } from "../constants/usersActionType";
 
 export const getAllUser = (users) => ({
@@ -14,4 +15,8 @@ export const deleteAuthUser = () => ({
 export const updateUser = (user) => ({
   type: userAcionsType.UPDATE_USER,
   payload: user,
+});
+export const setLastPathName = (path) => ({
+  type: userAcionsType.LAST_PATH_NAME,
+  payload: path,
 });

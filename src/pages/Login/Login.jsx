@@ -13,13 +13,14 @@ import {
   Label,
   Row,
 } from "reactstrap";
-import { saveUser } from "../../actions/usersAction";
+import { saveUser, setLastPathName } from "../../actions/usersAction";
 import { loginField } from "../../constants/login";
 import useForm from "../../hooks/useForm";
 import { validationLogin } from "./validationLogin";
 
 const Login = () => {
   const { user, password } = loginField;
+
   const form = useForm(
     {
       [user]: "",
@@ -35,8 +36,10 @@ const Login = () => {
   const onSubmit = (formValues) => {
     clearFrom();
     if (users.listUser[formValues[user]]?.password === formValues[password]) {
-      navigate("/");
+      users.lastPathName ? navigate(users.lastPathName) : navigate("/");
+      dispatch(setLastPathName(""));
       dispatch(saveUser(users.listUser[formValues[user]]));
+      return;
     }
     setError("user name or password is invalid");
   };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Collapse,
   Nav,
@@ -10,16 +10,18 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import { deleteAuthUser } from "../../actions/usersAction";
+import { deleteAuthUser, setLastPathName } from "../../actions/usersAction";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
   const user = useSelector((state) => state.users.authUser);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const toggle = () => setIsOpen(!isOpen);
   const handleLogOut = () => {
     dispatch(deleteAuthUser());
+    dispatch(setLastPathName(pathname));
     navigate("/login");
   };
   return (

@@ -89,7 +89,7 @@ const QuestionDetail = () => {
       </Row>
       <Row>
         <Col>
-          <Card>
+          <Card color={hasVotedForOptionOne && "info"}>
             <CardBody>
               {question && <CardText>{question.optionOne.text}</CardText>}
               <Button
@@ -109,7 +109,7 @@ const QuestionDetail = () => {
           </Card>
         </Col>
         <Col>
-          <Card>
+          <Card color={hasVotedForOptionTwo && "info"}>
             <CardBody>
               {question && <CardText>{question.optionTwo.text}</CardText>}
               <Button

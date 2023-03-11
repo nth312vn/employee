@@ -3,6 +3,7 @@ import { userAcionsType } from "../constants/usersActionType";
 const initialState = {
   listUser: {},
   authUser: null,
+  lastPathName: "",
 };
 export const usersReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -25,6 +26,10 @@ export const usersReducer = (state = initialState, action) => {
         [action.payload.id]: action.payload,
       };
       newState.authUser = action.payload;
+      return newState;
+    }
+    case userAcionsType.LAST_PATH_NAME: {
+      const newState = { ...state, lastPathName: action.payload };
       return newState;
     }
     default:
